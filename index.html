@@ -265,6 +265,27 @@ html,body{overflow-x:hidden}
   .mySlides{max-height:80vh}
 }
 
+/* =====================================================
+   LOGO (added): navbar mark + faint hero watermark
+   ===================================================== */
+.brand svg{width:40px;height:40px;flex:none;display:block}
+.hero{position:relative;overflow:hidden}
+.hero>*{position:relative;z-index:1}
+.hero .tag{background:transparent}
+.hero>.hero-mark{
+  position:absolute;
+  top:50%;left:50%;
+  width:min(330px,80%);
+  height:auto;
+  transform:translate(-50%,-50%);
+  opacity:.14;
+  z-index:0;
+  pointer-events:none
+}
+@media (max-width:700px){
+  .brand svg{width:34px;height:34px}
+}
+
 /* respect users who prefer less motion */
 @media (prefers-reduced-motion:reduce){
   *{animation-duration:.01ms !important;animation-delay:0s !important;transition-duration:.01ms !important}
@@ -277,6 +298,15 @@ html,body{overflow-x:hidden}
 
 <header>
   <div class="brand">
+    <svg viewBox="0 0 200 200" aria-hidden="true" focusable="false">
+      <circle cx="100" cy="100" r="96" fill="#fff"/>
+      <path d="M100 140 Q132 100 100 56 Q68 100 100 140 Z" transform="rotate(-58 100 140)" fill="#3C5A3A" stroke="#fff" stroke-width="3" stroke-linejoin="round"/>
+      <path d="M100 140 Q132 100 100 56 Q68 100 100 140 Z" transform="rotate(58 100 140)" fill="#3C5A3A" stroke="#fff" stroke-width="3" stroke-linejoin="round"/>
+      <path d="M100 140 Q132 100 100 56 Q68 100 100 140 Z" transform="rotate(-29 100 140)" fill="#3C5A3A" stroke="#fff" stroke-width="3" stroke-linejoin="round"/>
+      <path d="M100 140 Q132 100 100 56 Q68 100 100 140 Z" transform="rotate(29 100 140)" fill="#3C5A3A" stroke="#fff" stroke-width="3" stroke-linejoin="round"/>
+      <path d="M100 140 Q132 100 100 56 Q68 100 100 140 Z" fill="#3C5A3A" stroke="#fff" stroke-width="3" stroke-linejoin="round"/>
+      <path d="M62 150 Q100 176 138 150 Q100 164 62 150 Z" fill="#3C5A3A"/>
+    </svg>
     <span>Power Yoga Classes</span>
   </div>
   <nav>
@@ -294,6 +324,15 @@ html,body{overflow-x:hidden}
 </div>
 
 <section class="hero" id="home">
+  <svg class="hero-mark" viewBox="0 0 200 200" aria-hidden="true" focusable="false">
+    <circle cx="100" cy="100" r="96" fill="#fff"/>
+    <path d="M100 140 Q132 100 100 56 Q68 100 100 140 Z" transform="rotate(-58 100 140)" fill="#3C5A3A" stroke="#fff" stroke-width="3" stroke-linejoin="round"/>
+    <path d="M100 140 Q132 100 100 56 Q68 100 100 140 Z" transform="rotate(58 100 140)" fill="#3C5A3A" stroke="#fff" stroke-width="3" stroke-linejoin="round"/>
+    <path d="M100 140 Q132 100 100 56 Q68 100 100 140 Z" transform="rotate(-29 100 140)" fill="#3C5A3A" stroke="#fff" stroke-width="3" stroke-linejoin="round"/>
+    <path d="M100 140 Q132 100 100 56 Q68 100 100 140 Z" transform="rotate(29 100 140)" fill="#3C5A3A" stroke="#fff" stroke-width="3" stroke-linejoin="round"/>
+    <path d="M100 140 Q132 100 100 56 Q68 100 100 140 Z" fill="#3C5A3A" stroke="#fff" stroke-width="3" stroke-linejoin="round"/>
+    <path d="M62 150 Q100 176 138 150 Q100 164 62 150 Z" fill="#3C5A3A"/>
+  </svg>
   <div class="tag">Hatha &middot; Ashtanga &middot; Meditation &middot; Power Yoga</div>
   <h1>Welcome to Yoga with Afreen</h1>
   <p>Gentle, guided yoga  in the studio or from the comfort of your home.</p>
